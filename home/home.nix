@@ -4,8 +4,8 @@
   home.username = "psoewish";
   home.homeDirectory = "/home/psoewish";
 
-
-  home.packages = [
+  imports = [
+    ../themes/rose-pine.nix
   ];
 
   home.file = {
