@@ -34,31 +34,31 @@
       recursive = true;
       force = true;
     };
-    ".config/hypr" = {
-      source = ./hypr;
-      recursive = true;
-      force = true;
-    };
+    # ".config/hypr" = {
+    #   source = ./hypr;
+    #   recursive = true;
+    #   force = true;
+    # };
     ".config/qutebrowser" = {
       source = ./qutebrowser;
       recursive = true;
       force = true;
     };
-    ".config/rofi" = {
-      source = ./rofi;
-      recursive = true;
-      force = true;
-    };
-    ".config/starship.toml" = {
-      source = ./starship/starship.toml;
-      recursive = true;
-      force = true;
-    };
-    ".config/waybar" = {
-      source = ./waybar;
-      recursive = true;
-      force = true;
-    };
+    # ".config/rofi" = {
+    #   source = ./rofi;
+    #   recursive = true;
+    #   force = true;
+    # };
+    # ".config/starship.toml" = {
+    #   source = ./starship/starship.toml;
+    #   recursive = true;
+    #   force = true;
+    # };
+    # ".config/waybar" = {
+    #   source = ./waybar;
+    #   recursive = true;
+    #   force = true;
+    # };
     ".config/yazi" = {
       source = ./yazi;
       recursive = true;
