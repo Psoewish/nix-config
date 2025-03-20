@@ -34,7 +34,7 @@ end
 if type -q eza
     alias ls='eza -a --group-directories-first --icons="auto"'
     alias ll='eza -al --group-directories-first --icons="auto"'
-    alias lt='eza -aT -L=3 --icons"auto" --git-ignore'
+    alias lt='eza -aT -L=3 --icons="auto" --git-ignore'
 end
 
 alias mkdir='mkdir -pv'
