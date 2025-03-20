@@ -13,7 +13,6 @@
     git
     lazygit
     helix
-    killall
     yazi
     bat
     btop
@@ -22,5 +21,6 @@
     tldr
     unzip
     zip
+    killall
   ];
 }
