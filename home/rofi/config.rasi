@@ -160,4 +160,4 @@ configuration {
   }
 }
 
-# @theme "./themes/rose-pine.rasi"
+@theme "./themes/rose-pine.rasi"
