@@ -49,8 +49,8 @@
       recursive = true;
       force = true;
     };
-    ".config/starship" = {
-      source = ./starship;
+    ".config/starship.toml" = {
+      source = ./starship/starship.toml;
       recursive = true;
       force = true;
     };
