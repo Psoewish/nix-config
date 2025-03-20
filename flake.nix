@@ -8,27 +8,27 @@
     stylix.url = "github:danth/stylix";
   };
 
-  outputs = { self, nixpkgs, home-manager,stylix, ... } @inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, ... } @inputs:
   let
-    lib = nixpkgs.lib;
     system = "x86_64-linux";
+    lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      nixos-desktop = nixpkgs.lib.nixosSystem {
+      nixos-desktop = lib.nixosSystem {
         inherit system;
         modules = [
           ./hosts/desktop/configuration.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.psoewish = import ./home-manager/home.nix;
-            home-manager.backupFileExtension = "backup";
-          }
           stylix.nixosModules.stylix
           ./modules/core
           ./modules/packages
         ];
+      };
+    };
+    homeConfigurations = {
+      psoewish = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./home.nix ];
       };
     };
   };
