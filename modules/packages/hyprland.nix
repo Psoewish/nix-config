@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.hyprland = {
@@ -23,7 +23,6 @@
   environment.systemPackages = with pkgs; [
     hyprcursor
     hypridle
-    hyprpaper
     mpvpaper
     waypaper
     rofi-wayland
