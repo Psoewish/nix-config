@@ -2,8 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # foot
-    # fish
+    foot
+    fish
     starship
     zoxide
     fzf
@@ -12,7 +12,8 @@
     curl
     git
     lazygit
-    # helix
+    helix
+    killall
     yazi
     bat
     btop

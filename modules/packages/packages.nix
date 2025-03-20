@@ -6,9 +6,6 @@
     gh
     firefox
     vesktop
-helix
-foot
-fish
 qutebrowser
   ];
 }
