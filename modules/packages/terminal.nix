@@ -23,5 +23,6 @@
     zip
     killall
     xdotool
+    jq
   ];
 }
