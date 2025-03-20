@@ -38,6 +38,7 @@
       source = ./hypr;
       recursive = true;
       force = true;
+      onChange = "hyprctl reload";
     };
     ".config/qutebrowser" = {
       source = ./qutebrowser;
@@ -58,6 +59,7 @@
       source = ./waybar;
       recursive = true;
       force = true;
+      onChange = "killall .waybar-wrapped; waybar";
     };
     ".config/yazi" = {
       source = ./yazi;
