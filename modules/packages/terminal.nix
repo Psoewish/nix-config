@@ -22,5 +22,6 @@
     unzip
     zip
     killall
+    xdotool
   ];
 }
