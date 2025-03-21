@@ -20,8 +20,8 @@
         modules = [
           ./hosts/desktop/configuration.nix
           stylix.nixosModules.stylix
-          ./modules/core
-          ./modules/packages
+          ./system/core
+          ./system/packages
         ];
       };
     };
