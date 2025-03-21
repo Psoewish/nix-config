@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -7,5 +7,6 @@
     firefox
     vesktop
     qutebrowser
+    inputs.zen-browser.packages."${system}".default
   ];
 }

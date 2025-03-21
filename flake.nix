@@ -41,8 +41,8 @@
           stylix.nixosModules.stylix
           ./system/core
           ./system/packages
-          inputs.zen-browser.packages."${system}".default
         ];
+        specialArgs.inputs = inputs;
       };
     };
     homeConfigurations = {
