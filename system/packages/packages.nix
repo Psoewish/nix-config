@@ -7,6 +7,5 @@
     firefox
     vesktop
     qutebrowser
-    inputs.zen-browser.x86_64-linux.default
   ];
 }
