@@ -31,26 +31,24 @@
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
           stylix.nixosModules.stylix
           ./system/core
           ./system/packages
-        ];
-        specialArgs.inputs = inputs;
-      };
-    };
-    homeConfigurations = {
-      psoewish = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./home/home.nix
-          stylix.homeManagerModules.stylix
+          home-manager.nixosModules.home-manager {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.psoewish = import ./home/home.nix;
+              extraSpecialArgs = {inherit inputs; };
+            };
+          }
         ];
       };
     };
