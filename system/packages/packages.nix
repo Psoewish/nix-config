@@ -6,6 +6,7 @@
     gh
     firefox
     vesktop
-qutebrowser
+    qutebrowser
+    inputs.zen-browser.x86_64-linux.default
   ];
 }
