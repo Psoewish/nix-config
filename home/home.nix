@@ -38,7 +38,6 @@
       source = ./hypr;
       recursive = true;
       force = true;
-      onChange = "hyprctl reload";
     };
     ".config/qutebrowser" = {
       source = ./qutebrowser;
@@ -50,11 +49,11 @@
       recursive = true;
       force = true;
     };
-    # ".config/starship.toml" = {
-    #   source = ./starship/starship.toml;
-    #   recursive = true;
-    #   force = true;
-    # };
+    ".config/starship.toml" = {
+      source = ./starship.toml;
+      recursive = true;
+      force = true;
+    };
     ".config/waybar" = {
       source = ./waybar;
       recursive = true;
