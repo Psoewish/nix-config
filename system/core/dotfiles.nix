@@ -1,5 +1,9 @@
+{ pkgs, ... }:
+
 {
-  system.activationScripts.text = ''
-    stow -d $HOME/nix-config/dotfiles -t $HOME/.config --adopt -R .
-  '';
+  system.activationScripts = {
+    stowScript.text = ''
+      ${pkgs.stow}/bin/stow -d /home/psoewish/nix-config/dotfiles -t /home/psoewish/.config --adopt --restow .
+    '';
+  };
 }
