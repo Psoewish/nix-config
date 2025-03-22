@@ -16,10 +16,11 @@
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
-        inherit system;
+        inherit system pkgs;
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
