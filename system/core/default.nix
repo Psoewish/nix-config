@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./dotfiles.nix
     ./audio.nix
     ./bluetooth.nix
     ./bootloader.nix
