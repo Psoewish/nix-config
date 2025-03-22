@@ -17,6 +17,7 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
+    nixpkgs.config.allowUnfree = true;
   in {
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
