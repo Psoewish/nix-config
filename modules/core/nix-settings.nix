@@ -9,5 +9,4 @@
       options = "--delete-older-than 7d";
     };
   };
-  nixpkgs.config.allowUnFree = true;
 }

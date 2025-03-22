@@ -3,10 +3,7 @@
 
   inputs = {
   # Nix Packages
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-      config.allowUnfree = true;
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
   # Zen Browser
     zen-browser = {
