@@ -3,7 +3,10 @@
 
   inputs = {
   # Nix Packages
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+      config.allowUnfree = true;
+    };
 
   # Zen Browser
     zen-browser = {
@@ -17,7 +20,6 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = nixpkgs.legacyPackages.${system};
-    nixpkgs.config.allowUnfree = true;
   in {
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
