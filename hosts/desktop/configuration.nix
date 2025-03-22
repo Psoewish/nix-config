@@ -1,12 +1,8 @@
 { ... }:
 
 {
-  imports =
-    [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix ];
 
-  config = {
-    networking.hostName = "nixos-desktop";
-    config.allowUnfree = true;
-    system.stateVersion = "24.11";
-  };
+  networking.hostName = "nixos-desktop";
+  system.stateVersion = "24.11";
 }
