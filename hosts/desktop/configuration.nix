@@ -4,7 +4,7 @@
   imports =
     [ ./hardware-configuration.nix ];
 
-  networking.hostName = "nixos-desktop";
+  config.networking.hostName = "nixos-desktop";
 
   config.allowUnfree = true;
 
