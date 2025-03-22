@@ -1,8 +1,9 @@
 { pkgs, ... }:
-
 {
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = false;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
 
   environment.systemPackages = with pkgs; [
     overskride

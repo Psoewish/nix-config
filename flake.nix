@@ -23,8 +23,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
-          ./system/core
-          ./system/packages
+          ./modules/core
+          ./modules/packages
         ];
       };
     };
