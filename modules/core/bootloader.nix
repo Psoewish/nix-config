@@ -14,6 +14,6 @@
     };
     consoleLogLevel = 3;
     kernelPackages = pkgs.linuxPackages_zen;
-    supportedFileSystems = [ "ntfs" "nfs" ];
+    supportedFilesystems = [ "ntfs" "nfs" ];
   };
 }
