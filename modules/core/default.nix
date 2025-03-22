@@ -3,6 +3,7 @@
 {
   imports = [
     ./users.nix
+    ./nfs.nix
     ./bootloader.nix
     ./graphics.nix
     ./bluetooth.nix
