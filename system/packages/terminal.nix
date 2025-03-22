@@ -15,6 +15,7 @@
     helix
     yazi
     bat
+    stow
     btop
     eza
     ripgrep
