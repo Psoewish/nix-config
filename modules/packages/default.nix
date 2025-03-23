@@ -21,10 +21,9 @@
     # Terminal Tools
     ./terminal/foot.nix
     ./terminal/wezterm.nix
-    ./terminal/nushell.nix
+    ./terminal/zsh.nix
     ./terminal/fish.nix
     ./terminal/starship.nix
-    ./terminal/oh-my-posh.nix
     ./terminal/helix.nix
     ./terminal/git.nix
     ./terminal/cli-tools.nix
