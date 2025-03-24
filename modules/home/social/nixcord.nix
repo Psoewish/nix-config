@@ -11,10 +11,7 @@
         betterFolders.enable = true;
         biggerStreamPreview.enable = true;
         clearURLs.enable = true;
-        fixYoutubeEmbeds = {
-          enable = true;
-          volume = 10.0;
-        };
+        fixYoutubeEmbeds.enable = true;
         messageLinkEmbeds.enable = true;
         noOnboardingDelay.enable = true;
         openInApp.enable = true;
