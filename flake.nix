@@ -21,12 +21,12 @@
     nixcord = {
       url = "github:kaylorben/nixcord";
     };
-  };
 
   # Stylix
     stylix = {
       url = "github:danth/stylix";
     };
+  };
 
   outputs = { self, nixpkgs, home-manager, nixcord, stylix, ... } @inputs:
   let
