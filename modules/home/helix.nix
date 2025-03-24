@@ -2,7 +2,7 @@
 
 {
   programs.helix = {
-    enables = true;
+    enable = true;
     defaultEditor = true;
     settings = {
       theme = "rose_pine";
