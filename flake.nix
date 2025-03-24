@@ -35,7 +35,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.psoewish = import ./home/home.nix;
+              users.psoewish = import ./modules/home/home.nix;
               extraSpecialArgs = { inherit inputs; };
             };
           }
