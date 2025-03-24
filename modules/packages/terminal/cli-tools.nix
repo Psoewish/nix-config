@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     zoxide
     fzf
+    grc
     stow
     wget
     curl
