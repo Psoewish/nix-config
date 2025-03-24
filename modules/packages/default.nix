@@ -24,7 +24,7 @@
     ./terminal/zsh.nix
     ./terminal/fish.nix
     ./terminal/starship.nix
-    ./terminal/helix.nix
+    # ./terminal/helix.nix
     ./terminal/git.nix
     ./terminal/cli-tools.nix
     ./terminal/yazi.nix
