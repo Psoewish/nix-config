@@ -16,9 +16,19 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+  # Nixcord
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @inputs:
+  # Stylix
+    stylix = {
+      url = "github:danth/stylix";
+    };
+
+  outputs = { self, nixpkgs, home-manager, nixcord, stylix, ... } @inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -31,12 +41,16 @@
           ./hosts/desktop/configuration.nix
           ./modules/core
           ./modules/packages
+          stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
               users.psoewish = import ./modules/home/home.nix;
               extraSpecialArgs = { inherit inputs; };
+              sharedModules = [
+                nixcord.homeManagerModules.nixcord
+              ];
             };
           }
         ];

@@ -4,6 +4,7 @@
   imports = [
     ./users.nix
     ./hyprland.nix
+    ../home/games/steam.nix
     ./nfs.nix
     ./bootloader.nix
     ./graphics.nix

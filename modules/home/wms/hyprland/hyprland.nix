@@ -17,6 +17,7 @@
   ];
 
   imports = [
+    ./autostart.nix
     ./config.nix
     ./monitors.nix
     ./workspaces.nix

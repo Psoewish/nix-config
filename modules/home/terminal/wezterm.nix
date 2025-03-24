@@ -6,9 +6,9 @@
     extraConfig = ''
     local config = {
       default_prog = { 'fish' },
-      font = wezterm.font ('CaskaydiaCove Nerd Font'),
-      font_size = 14,
-      color_scheme = 'rose-pine',
+      # font = wezterm.font ('CaskaydiaCove Nerd Font'),
+      # font_size = 14,
+      # color_scheme = 'rose-pine',
       hide_tab_bar_if_only_one_tab = true,
       window_close_confirmation = "NeverPrompt",
       enable_wayland = true,

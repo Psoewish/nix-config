@@ -5,7 +5,7 @@
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "rose_pine";
+      # theme = "rose_pine";
       editor = {
         line-number = "relative";
         continue-comments = false;

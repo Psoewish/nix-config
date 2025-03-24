@@ -8,14 +8,25 @@ in {
   home.homeDirectory = "/home/${username}";
 
   imports = [
-    ./hyprland/hyprland.nix
-    ./wezterm.nix
-    ./fish.nix
-    ./cli.nix
-    ./helix.nix
+    ./wms/hyprland/hyprland.nix
+
     ../../themes/rose-pine.nix
+
+    ./terminal/wezterm.nix
+    ./terminal/fish.nix
+    ./terminal/cli.nix
+    ./terminal/helix.nix
+    ./terminal/yazi.nix
+
+    # ./browsers/firefox.nix
+    ./browsers/zen-browser.nix
+    ./browsers/qutebrowser.nix
+
+    ./media/cider.nix
+
+    ./social/nixcord.nix
   ];
-  
+
   # No touchy
   programs.home-manager.enable = true;
   home.stateVersion = "24.11";
