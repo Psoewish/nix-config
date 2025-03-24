@@ -7,5 +7,5 @@
     description = "psoewish";
     extraGroups = [ "networkmanager" "wheel" "qemu" "kvm" "libvirtd" ];
   };
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
 }
