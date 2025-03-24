@@ -8,7 +8,6 @@
       shx = "sudo hx";
       cat = "bat";
       man = "batman";
-      copycat = "wl-copy < cat";
       mkdir = "mkdir -pv";
       cp = "rsync -ah --info=progress2";
       ls = "eza";
@@ -20,6 +19,9 @@
       set -gx EDITOR hx
       set sponge_purge_only_on_exit true
     '';
+    functions = {
+      copycat = "cat $argv | wl-copy";
+    };
     plugins = with pkgs.fishPlugins; [
       { name = "autopair"; src = autopair.src; }
       { name = "puffer"; src = puffer.src; }
