@@ -48,6 +48,7 @@
               useUserPackages = true;
               users.psoewish = import ./modules/home/home.nix;
               extraSpecialArgs = { inherit inputs; };
+              backupFileExtension = "backup";
               sharedModules = [
                 nixcord.homeManagerModules.nixcord
               ];

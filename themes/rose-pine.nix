@@ -1,33 +1,6 @@
-{ pkgs, config, stylix, ... }:
+{ pkgs, config, ... }:
 
 {
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-    size = 24;
-  };
-
-  gtk = {
-    enable = true;
-
-    theme = {
-      package = pkgs.rose-pine-gtk-theme;
-      name = "rose-pine";
-    };
-
-    iconTheme = {
-      package = pkgs.rose-pine-icon-theme;
-      name = "oomox-rose-pine";
-    };
-
-    font = {
-      package = pkgs.nerd-fonts.caskaydia-cove;
-      name = "CaskaydiaCove Nerd Font";
-      size = 12;
-    };
-  };
-
   stylix = {
     enable = true;
 
@@ -62,6 +35,13 @@
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       emoji = config.stylix.fonts.monospace;
+
+      sizes = {
+        applications = 14;
+        terminal = 14;
+        popups = 14;
+        desktop = 14;
+      };
     };
   };
 }
