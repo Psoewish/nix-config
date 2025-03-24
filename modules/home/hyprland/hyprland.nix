@@ -1,20 +1,10 @@
-{ inputs, pkgs,... }:
-
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+    systemd.enableXdgAutostart = true;
     systemd.variables = [ "--all" ];
   };
-
-  imports = [
-    ./monitors.nix
-    ./workspaces.nix
-    ./windowrules.nix
-    ./config.nix
-    ./keybinds.nix
-  ];
 
   home.packages = with pkgs; [
     hypridle
@@ -24,5 +14,13 @@
     wl-clipboard
     dunst
     waybar
+  ];
+
+  imports = [
+    ./config.nix
+    ./monitors.nix
+    ./workspaces.nix
+    ./windowrules.nix
+    ./keybinds.nix
   ];
 }

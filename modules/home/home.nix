@@ -13,6 +13,7 @@ in {
     ./fish.nix
     ./cli.nix
     ./helix.nix
+    ../../themes/rose-pine.nix
   ];
   
   # No touchy

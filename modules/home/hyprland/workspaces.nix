@@ -12,8 +12,8 @@
     "5, monitor:DP-2, default:true, persistent:true"
 
     # Special workspaces
-    "special:specialTerminal, on-created-empty: uwsm app -- wezterm --class specialTerminal"
-    "special:specialAudio, on-created-empty: uwsm app -- wezterm --class specialAudio start -- pulsemixer"
-    "special:specialFileManager, on-created-empty: uwsm app -- wezterm --class specialFileManager start -- yazi"
+    "special:dropterm, on-created-empty: $uwsm $term --class dropterm"
+    "special:dropaudio on-created-empty: $uwsm $term --class dropaudio start -- pulsemixer"
+    "special:dropfile, on-created-empty: $uwsm $term --class dropfile start -- yazi"
   ];
 }

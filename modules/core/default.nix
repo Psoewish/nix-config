@@ -3,6 +3,7 @@
 {
   imports = [
     ./users.nix
+    ./hyprland.nix
     ./nfs.nix
     ./bootloader.nix
     ./graphics.nix

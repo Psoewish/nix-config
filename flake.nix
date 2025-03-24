@@ -11,9 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-  # Hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-
   # Zen Browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs,... }:
 
 let
   greeter = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  session = "${pkgs.hyprland}/bin/Hyprland";
+  session = "uwsm start hyprland-uwsm.desktop";
   username = "psoewish";
 in {
   services.greetd = {
@@ -18,4 +18,14 @@ in {
       };
     };
   };
+
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
+
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-wlr
+  ];
 }

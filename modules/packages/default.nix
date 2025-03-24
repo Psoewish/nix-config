@@ -11,7 +11,7 @@
     ./games/steam.nix
 
     # Window Managers
-    ./wms/hyprland.nix
+    # ./wms/hyprland.nix
 
     # Theming
     ./theme-stuff/themes.nix
@@ -30,7 +30,7 @@
     ./terminal/yazi.nix
 
     # Misc
-    ./misc/display-manager.nix
+    # ./misc/display-manager.nix
     # ./misc/thunar.nix
     ./misc/vesktop.nix
     ./misc/cider.nix

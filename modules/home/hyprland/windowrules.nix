@@ -12,6 +12,7 @@
 
     # Floating windows
     "float, class:(steam|filemanager)"
+    "size 80%, class:(steam|filemanager)"
 
     # Secondary display apps
     "workspace 5, class:(discord|vesktop|Cider|com.github.th_ch.youtube_music)"
@@ -20,9 +21,10 @@
     "workspace 4, class:(steam_app_\d*)"
 
     # Special workspaces
-    "workspace special:specialTerminal, class:(specialTerminal)"
-    "workspace special:specialAudio, class:(specialAudio)"
-    "workspace special:specialFileManager, class:(specialFileManager)"
-    "float, center, size 50%, class:(specialTerminal|specialAudio|specialFileManager)"
+    "workspace special:dropterm, class:(dropterm)"
+    "workspace special:dropaudio, class:(dropaudio)"
+    "workspace special:dropfile class:(dropfile)"
+    "float, center, size 50%, class:(dropterm|dropaudio|dropfile)"
+    "size 50%, class:(dropterm|dropaudio|dropfile)"
   ];
 }

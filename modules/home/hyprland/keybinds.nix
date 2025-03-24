@@ -52,9 +52,9 @@
       "$shiftmod, down, movewindow, d"
 
       # Scratchpads
-      "$shiftmod, RETURN, togglespecialworkspace, specialTerminal"
-      "$shiftmod, E, togglespecialworkspace, specialFileManager"
-      "$shiftmod, P, togglespecialworkspace, specialAudio"
+      "$shiftmod, RETURN, togglespecialworkspace, dropterm"
+      "$shiftmod, E, togglespecialworkspace, dropfile"
+      "$shiftmod, P, togglespecialworkspace, dropaudio"
     ] ++ (builtins.concatLists (builtins.genList (i:
       let ws = i + 1;
       in [
