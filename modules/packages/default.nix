@@ -20,7 +20,7 @@
 
     # Terminal Tools
     ./terminal/foot.nix
-    ./terminal/wezterm.nix
+    # ./terminal/wezterm.nix
     ./terminal/zsh.nix
     ./terminal/fish.nix
     ./terminal/starship.nix
