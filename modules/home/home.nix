@@ -9,6 +9,8 @@ in {
 
   imports = [
     ./wezterm.nix
+    ./fish.nix
+    ./cli.nix
     ./helix.nix
   ];
   

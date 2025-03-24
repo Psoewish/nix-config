@@ -22,11 +22,11 @@
     ./terminal/foot.nix
     # ./terminal/wezterm.nix
     ./terminal/zsh.nix
-    ./terminal/fish.nix
-    ./terminal/starship.nix
+    # ./terminal/fish.nix
+    # ./terminal/starship.nix
     # ./terminal/helix.nix
     ./terminal/git.nix
-    ./terminal/cli-tools.nix
+    # ./terminal/cli-tools.nix
     ./terminal/yazi.nix
 
     # Misc
@@ -34,6 +34,6 @@
     # ./misc/thunar.nix
     ./misc/vesktop.nix
     ./misc/cider.nix
-    ./misc/lsp.nix
+    # ./misc/lsp.nix
   ];
 }
