@@ -8,6 +8,7 @@ in {
   home.homeDirectory = "/home/${username}";
 
   imports = [
+    ./hyprland/hyprland.nix
     ./wezterm.nix
     ./fish.nix
     ./cli.nix
