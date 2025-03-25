@@ -11,7 +11,7 @@ in {
     ./wms/hyprland/hyprland.nix
     ./wms/waybar.nix
 
-    ../../themes/rose-pine.nix
+    ../../themes/theme.nix
 
     ./terminal/wezterm.nix
     ./terminal/fish.nix
