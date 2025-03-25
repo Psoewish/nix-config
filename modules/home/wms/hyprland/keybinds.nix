@@ -51,16 +51,23 @@
       "$mod, down, movefocus, d"
       "$shiftmod, down, movewindow, d"
 
+      # Workspace management
+      "$mod, 1, workspace, 1"
+      "$mod, 1, movetoworkspace, 1"
+      "$mod, 2, workspace, 2"
+      "$mod, 2, movetoworkspace, 2"
+      "$mod, 3, workspace, 3"
+      "$mod, 3, movetoworkspace, 3"
+      "$mod, 4, workspace, 4"
+      "$mod, 4, movetoworkspace, 4"
+      "$mod, 5, workspace, 5"
+      "$mod, 5, movetoworkspace, 5"
+
       # Scratchpads
       "$shiftmod, RETURN, togglespecialworkspace, dropterm"
       "$shiftmod, E, togglespecialworkspace, dropfile"
       "$shiftmod, P, togglespecialworkspace, dropaudio"
-    ] ++ (builtins.concatLists (builtins.genList (i:
-      let ws = i + 1;
-      in [
-        "$mod, code:1${toString i}, workspace, ${toString ws}"
-        "$shiftmod, code:${toString i}, movetoworkspace, ${toString ws}"
-      ]) 5));
+    ];
       
     bindm = [
       "$mod, mouse:272, movewindow"
