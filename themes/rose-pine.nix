@@ -33,17 +33,18 @@
         name = "CaskaydiaCove Nerd Font";
       };
       serif = {
-        package = pkgs.inter;
+        package = pkgs.roboto;
         name = "Inter";
       };
+      # serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.serif;
       emoji = config.stylix.fonts.monospace;
 
       sizes = {
-        applications = 10;
+        applications = 12;
         terminal = 12;
-        popups = 10;
-        desktop = 10;
+        popups = 12;
+        desktop = 12;
       };
     };
 
