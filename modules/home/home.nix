@@ -17,6 +17,7 @@ in {
     ./terminal/cli.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
+    ./terminal/hyfetch.nix
 
     # ./browsers/firefox.nix
     ./browsers/zen-browser.nix

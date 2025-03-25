@@ -12,6 +12,7 @@
     jq
     grc
     ripgrep
+    htop
   ];
   programs = {
     zoxide = {

@@ -32,16 +32,23 @@
         package = pkgs.nerd-fonts.caskaydia-cove;
         name = "CaskaydiaCove Nerd Font";
       };
-      serif = config.stylix.fonts.monospace;
-      sansSerif = config.stylix.fonts.monospace;
+      serif = {
+        package = pkgs.inter;
+        name = "Inter";
+      };
+      sansSerif = config.stylix.fonts.serif;
       emoji = config.stylix.fonts.monospace;
 
       sizes = {
-        applications = 14;
-        terminal = 14;
-        popups = 14;
-        desktop = 14;
+        applications = 10;
+        terminal = 12;
+        popups = 10;
+        desktop = 10;
       };
     };
+
+    image = ./wallpapers/anime-wallpaper-night.jpg;
+
+    opacity.terminal = 0.8;
   };
 }
