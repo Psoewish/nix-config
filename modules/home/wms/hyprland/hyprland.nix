@@ -9,7 +9,6 @@
   home.packages = with pkgs; [
     hypridle
     mpvpaper
-    rofi-wayland
     grimblast
     wl-clipboard
     dunst

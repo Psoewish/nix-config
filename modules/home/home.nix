@@ -19,6 +19,7 @@ in {
     ./terminal/helix.nix
     ./terminal/yazi.nix
     ./terminal/hyfetch.nix
+    ./terminal/pass.nix
 
     # ./browsers/firefox.nix
     ./browsers/zen-browser.nix
@@ -27,6 +28,8 @@ in {
     ./media/cider.nix
 
     ./social/nixcord.nix
+
+    ./misc/rofi.nix
   ];
 
   # No touchy
