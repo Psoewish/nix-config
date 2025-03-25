@@ -8,18 +8,12 @@
       colors.webpage.preferred_color_scheme = "dark";
       downloads.position = "bottom";
       downloads.remove_finished = 300000;
-      auto_save_session = true;
+      auto_save.session = true;
       scrolling.bar = "never";
       scrolling.smooth = true;
       statusbar.show = "in-mode";
       hints.chars = "arstneio";
       tabs.last_close = "startpage";
-      tabs.padding = {
-        bottom = 8;
-        left = 8;
-        right = 8;
-        top = 8;
-      };
       tabs.max_width = 250;
       tabs.show = "multiple";
       content.cookies.accept = "all";
@@ -27,6 +21,7 @@
       content.autoplay = false;
     };
     extraConfig = ''
+      c.tabs.padding = {'top': 8, 'bottom': 8, 'right': 8, 'left': 8}
       config.bind('<Alt+Ctrl+C>', 'config-cycle tabs.show always never')
     '';
   };
