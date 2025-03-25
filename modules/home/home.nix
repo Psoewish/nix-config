@@ -16,6 +16,7 @@ in {
     ./terminal/wezterm.nix
     ./terminal/fish.nix
     ./terminal/cli.nix
+    ./terminal/git.nix
     ./terminal/helix.nix
     ./terminal/yazi.nix
     ./terminal/hyfetch.nix
