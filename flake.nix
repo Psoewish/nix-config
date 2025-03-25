@@ -40,7 +40,6 @@
         modules = [
           ./hosts/desktop/configuration.nix
           ./modules/core
-          ./modules/packages
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager {
             home-manager = {
