@@ -53,15 +53,15 @@
 
       # Workspace management
       "$mod, 1, workspace, 1"
-      "$mod, 1, movetoworkspace, 1"
+      "$shiftmod, 1, movetoworkspace, 1"
       "$mod, 2, workspace, 2"
-      "$mod, 2, movetoworkspace, 2"
+      "$shiftmod, 2, movetoworkspace, 2"
       "$mod, 3, workspace, 3"
-      "$mod, 3, movetoworkspace, 3"
+      "$shiftmod, 3, movetoworkspace, 3"
       "$mod, 4, workspace, 4"
-      "$mod, 4, movetoworkspace, 4"
+      "$shiftmod, 4, movetoworkspace, 4"
       "$mod, 5, workspace, 5"
-      "$mod, 5, movetoworkspace, 5"
+      "$shiftmod, 5, movetoworkspace, 5"
 
       # Scratchpads
       "$shiftmod, RETURN, togglespecialworkspace, dropterm"
