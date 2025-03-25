@@ -8,20 +8,18 @@
       mainBar = {
         output = "DP-1";
         layer = "top";
-        margin = "10 10 0 10";
+        height = 20;
         spacing = 10;
         modules-left = [
           "hyprland/workspaces"
         ];
         modules-center = [
-          "clock"
+          "mpris"
         ];
         modules-right = [
-          "mpris"
           "tray"
           "privacy"
-          "bluetooth"
-          "network"
+          "clock"
         ];
 
         "hyprland/workpaces" = {
@@ -45,24 +43,6 @@
           format = "{artist} - {title}";
           max-length = 80;
           interval = 1;
-        };
-        "tray" = {
-          icon-size = 18;
-          icon-spacing = 10;
-        };
-        "privacy" = {
-          icon-size = 18;
-          icon-spacing = 10;
-        };
-        "bluetooth" = {
-          format = "󰂯";
-          format-on = "󰂯";
-          format-off = "󰂲";
-        };
-        network = {
-          format = "{icon} {bandwidthDownBytes} {bandwidthUpBytes}";
-          format-ethernet = "";
-          format-disconnected = "󰈂";
         };
       };
     };
