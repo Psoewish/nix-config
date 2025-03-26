@@ -4,9 +4,7 @@
   imports = [
     ./git.nix
     ./users.nix
-    ./hyprland.nix
-    ../home-manager/games/steam.nix
-    ./nfs.nix
+    ./automount.nix
     ./bootloader.nix
     ./graphics.nix
     ./bluetooth.nix
