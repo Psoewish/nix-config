@@ -1,4 +1,4 @@
-function __nixhelper_build_man
+function __nixhelper_rebuild_man
     echo (set_color --bold)"Build commands"
     echo
     echo "       Command | Description"(set_color normal)
@@ -6,4 +6,3 @@ function __nixhelper_build_man
     echo "         later | Rebuilds your system and switches to the new configuration upon rebooting"
     echo "          test | Checks if your configuration is valid"
 end
-
