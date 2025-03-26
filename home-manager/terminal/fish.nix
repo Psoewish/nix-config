@@ -21,33 +21,57 @@
     '';
     functions = {
       copycat = "cat $argv | wl-copy";
-      build = ''
-        if [ -z $argv ]
-          command echo 'Argument can\'t be empty.'
-          command echo ' '
-          command echo '    --now      |    Rebuilds your system and switched to the new configuration'
-          command echo '    --later    |    Rebuilds your system and switches to the new configuration upon rebooting'
-          command echo '    --test     |    Checks if your configuration is valid'
-        else
-          switch $argv[1]
-            case --now
-              command sudo nixos-rebuild switch --flake ~/nix-config
-            case --later
-              command sudo nixos-rebuild boot --flake ~/nix-config
-            case --test
-              command sudo nixos-rebuild test --flake ~/nix-config
-            case -h
-              command echo '    --now      |    Rebuilds your system and switched to the new configuration'
-              command echo '    --later    |    Rebuilds your system and switches to the new configuration upon rebooting'
-              command echo '    --test     |    Checks if your configuration is valid'
-            case '*'
-              command echo $argv' is not a valid argument'
-              command echo '    --now      |    Rebuilds your system and switched to the new configuration'
-              command echo '    --later    |    Rebuilds your system and switches to the new configuration upon rebooting'
-              command echo '    --test     |    Checks if your configuration is valid'
+      nixhelper = ''
+        set -l nixdir ~/nix-config
+        switch $argv[1]
+          case rebuild
+            switch $argv[2]
+              case now
+                command sudo nixos-rebuild switch --flake $nixdir
+              case later
+                command sudo nixos-rebuild boot --flake $nixdir
+              case "*"
+                __nixhelper_build_man
             end
-          end
+          case update
+            command nix flake update --flake $nixdir
+          case upgrade
+            switch $argv[2]
+              case now
+                command nix flake update --flake $nixdir
+                command sudo nixos-rebuild switch --flake $nixdir
+              case later
+                command nix flake update --flake $nixdir
+                command sudo nixos-rebuild boot --flake $nixdir
+              case "*"
+                __nixhelper_upgrade_man
+            end
+          case "*"
+            __nixhelper_man
+        end
       '';
+      __nixhelper_man = ''
+          echo (set_color --bold)"NixOS helper script manual"
+          echo
+          echo "       Command | Description"(set_color normal)
+          echo "         build | Commands for rebuilding your system"
+          echo "        update | Update the flake.lock file"
+          echo "       upgrade | Update the flake.lock file and rebuild"
+        '';
+      __nixhelper_build_man = ''
+          echo (set_color --bold)"Build commands"
+          echo
+          echo "       Command | Description"(set_color normal)
+          echo "           now | Rebuilds your system and switched to the new configuration"
+          echo "         later | Rebuilds your system and switches to the new configuration upon rebooting"
+        '';
+      __nixhelper_upgrade_man = ''
+          echo (set_color --bold)"Upgrade commands"
+          echo
+          echo "       Command | Description"(set_color normal)
+          echo "           now | Update and rebuild immediately"
+          echo "         later | Update and rebuild after reboot"
+        '';
     };
     plugins = with pkgs.fishPlugins; [
       { name = "autopair"; src = autopair.src; }
@@ -57,7 +81,6 @@
       { name = "bang-bang"; src = bang-bang.src; }
       { name = "git-abbr"; src = git-abbr.src; }
       { name = "pure"; src = pure.src; }
-      # { name = "transient-fish"; src = transient-fish.src; }
     ];
   };
 }
