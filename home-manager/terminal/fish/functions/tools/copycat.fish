@@ -1,1 +1,3 @@
-/nix/store/kpjdks2vvswkis4zmm71gj2g0gmagj9s-home-manager-files/.config/fish/functions/copycat.fish
+function copycat
+    cat $argv | wl-copy
+end

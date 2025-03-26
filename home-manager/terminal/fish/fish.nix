@@ -31,7 +31,13 @@
     ];
   };
   home.file = {
-    ".config/fish/functions/nixhelper".source = ./functions/nixhelper;
-    ".config/fish/functions/tools".source = ./functions/tools;
+    ".config/fish/functions/nixhelper" = {
+      source = ./functions/nixhelper;
+      recursive = true;
+    };
+    ".config/fish/functions/tools" = {
+      source = ./functions/tools;
+      recursive = true;
+    };
   };
 }

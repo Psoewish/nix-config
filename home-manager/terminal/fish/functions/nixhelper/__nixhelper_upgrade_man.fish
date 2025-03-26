@@ -1,1 +1,7 @@
-/nix/store/kpjdks2vvswkis4zmm71gj2g0gmagj9s-home-manager-files/.config/fish/functions/__nixhelper_upgrade_man.fish
+function __nixhelper_upgrade_man
+    echo (set_color --bold)"Upgrade commands"
+    echo
+    echo "       Command | Description"(set_color normal)
+    echo "           now | Update and rebuild immediately"
+    echo "         later | Update and rebuild after reboot"
+end
