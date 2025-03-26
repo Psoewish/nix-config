@@ -5,7 +5,7 @@
     ./git.nix
     ./users.nix
     ./hyprland.nix
-    ../home/games/steam.nix
+    ../home-manager/games/steam.nix
     ./nfs.nix
     ./bootloader.nix
     ./graphics.nix

@@ -39,13 +39,13 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
-          ./modules/core
+          ./system
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.psoewish = import ./modules/home/home.nix;
+              users.psoewish = import ./home-manager;
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
               sharedModules = [
