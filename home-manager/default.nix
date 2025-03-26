@@ -14,7 +14,7 @@ in {
     ./themes/theme.nix
 
     ./terminal/wezterm.nix
-    ./terminal/fish.nix
+    ./terminal/fish/fish.nix
     ./terminal/cli.nix
     ./terminal/git.nix
     ./terminal/helix.nix
