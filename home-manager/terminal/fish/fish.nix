@@ -18,6 +18,7 @@
       set -U fish_greeting
       set -gx EDITOR hx
       set sponge_purge_only_on_exit true
+      set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
     '';
     plugins = with pkgs.fishPlugins; [
       { name = "autopair"; src = autopair.src; }
@@ -30,6 +31,7 @@
     ];
   };
   home.file = {
-    ".config/fish/functions".source = ./functions;
+    ".config/fish/functions/nixhelper".source = ./functions/nixhelper;
+    ".config/fish/functions/tools".source = ./functions/tools;
   };
 }
