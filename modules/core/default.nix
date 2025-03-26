@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./git.nix
     ./users.nix
     ./hyprland.nix
     ../home/games/steam.nix
