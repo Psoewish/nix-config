@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs.rofi = {
     enable = true;
     pass = {

@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs = {
     hyfetch = {
       enable = true;

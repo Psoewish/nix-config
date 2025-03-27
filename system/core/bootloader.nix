@@ -1,6 +1,4 @@
-{ pkgs, ...}:
-
-{
+{pkgs, ...}: {
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -14,6 +12,6 @@
     };
     consoleLogLevel = 3;
     kernelPackages = pkgs.linuxPackages_zen;
-    supportedFilesystems = [ "ntfs" "nfs" ];
+    supportedFilesystems = ["ntfs" "nfs"];
   };
 }

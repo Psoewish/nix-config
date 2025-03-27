@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   wayland.windowManager.hyprland = {
     settings = {
       general = {
@@ -9,12 +7,12 @@
         gaps_out = 10;
         layout = "master";
       };
-  
+
       decoration = {
         rounding = 8;
         dim_inactive = false;
       };
-  
+
       animations = {
         enabled = true;
         animation = [
@@ -23,16 +21,16 @@
           "layers, 1, 5, default, fade"
         ];
       };
-  
+
       misc = {
         enable_swallow = true;
       };
-  
+
       cursor = {
         no_hardware_cursors = false;
         default_monitor = "DP-1";
       };
-  
+
       master = {
         allow_small_split = true;
         special_scale_factor = 1;
@@ -44,4 +42,3 @@
     };
   };
 }
-  

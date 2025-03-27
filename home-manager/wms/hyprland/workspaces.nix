@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   wayland.windowManager.hyprland.settings.workspace = [
     # Primary monitor
     "1, monitor:DP-1, default:true, persistent:true"

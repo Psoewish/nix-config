@@ -1,6 +1,4 @@
-{ pkgs, ...}:
-
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     wget
     curl
@@ -17,7 +15,7 @@
   programs = {
     zoxide = {
       enable = true;
-      options = [ "--cmd cd" ];
+      options = ["--cmd cd"];
     };
     fzf = {
       enable = true;

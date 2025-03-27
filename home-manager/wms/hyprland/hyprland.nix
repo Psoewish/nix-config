@@ -1,9 +1,8 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enableXdgAutostart = true;
-    systemd.variables = [ "--all" ];
+    systemd.variables = ["--all"];
   };
 
   home.packages = with pkgs; [

@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-
-let
+{
+  pkgs,
+  config,
+  ...
+}: let
   theme = "rose-pine";
   # Some example themes:
   # rose-pine, everforest, ayu-dark, ayu-mirage, catppuccin-mocha, dracula, gruvbox-dark-hard, nord, tokyo-night-dark

@@ -1,8 +1,5 @@
-{ ... }:
-
-let
+{...}: let
   username = "psoewish";
-
 in {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";

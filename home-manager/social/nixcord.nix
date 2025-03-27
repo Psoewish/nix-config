@@ -1,6 +1,4 @@
-{ ... }:
- 
-{
+{...}: {
   programs.nixcord = {
     enable = true;
     config = {

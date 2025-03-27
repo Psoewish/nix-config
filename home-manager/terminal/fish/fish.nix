@@ -1,7 +1,5 @@
-{ pkgs, ... }:
-
-{
-  home.packages = with pkgs; [ fish ];
+{pkgs, ...}: {
+  home.packages = with pkgs; [fish];
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -24,13 +22,34 @@
       set fish_function_path (path resolve $__fish_config_dir/functions/*/) $fish_function_path
     '';
     plugins = with pkgs.fishPlugins; [
-      { name = "autopair"; src = autopair.src; }
-      { name = "puffer"; src = puffer.src; }
-      { name = "sponge"; src = sponge.src; }
-      { name = "grc"; src = grc.src; }
-      { name = "bang-bang"; src = bang-bang.src; }
-      { name = "git-abbr"; src = git-abbr.src; }
-      { name = "pure"; src = pure.src; }
+      {
+        name = "autopair";
+        src = autopair.src;
+      }
+      {
+        name = "puffer";
+        src = puffer.src;
+      }
+      {
+        name = "sponge";
+        src = sponge.src;
+      }
+      {
+        name = "grc";
+        src = grc.src;
+      }
+      {
+        name = "bang-bang";
+        src = bang-bang.src;
+      }
+      {
+        name = "git-abbr";
+        src = git-abbr.src;
+      }
+      {
+        name = "pure";
+        src = pure.src;
+      }
     ];
   };
   home.file = {

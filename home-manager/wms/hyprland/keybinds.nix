@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     "$shiftmod" = "SUPER SHIFT";
@@ -16,7 +14,7 @@
     "$screenshot" = "grimblast --notify";
 
     "$media" = "playerctl -p 'cider'";
-    
+
     bind = [
       # Application launchers
       "$mod, RETURN, $uwsm $terminal"
@@ -34,7 +32,7 @@
       "$mod, Q, killactive"
       "$mod, F, fullscreenstate, 1 3"
       "$shiftmod, F, fullscreenstate, 3 3"
-      
+
       "$mod, I, layoutmsg, addmaster"
       "$mod, O, layoutmsg, removemaster"
 
@@ -68,7 +66,7 @@
       "$shiftmod, E, togglespecialworkspace, dropfile"
       "$shiftmod, P, togglespecialworkspace, dropaudio"
     ];
-      
+
     bindm = [
       "$mod, mouse:272, movewindow"
       "$mod, mouse273, resizewindow"

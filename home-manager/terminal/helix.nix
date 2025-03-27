@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -14,9 +12,9 @@
         popup-border = "all";
         end-of-line-diagnostics = "hint";
         statusline = {
-          left = [ "mode" "read-only-indicator" "diagnostics" ];
-          center = [ "spinner" "file-name" "file-modification-indicator" ];
-          right = [ "file-type" "position" ];
+          left = ["mode" "read-only-indicator" "diagnostics"];
+          center = ["spinner" "file-name" "file-modification-indicator"];
+          right = ["file-type" "position"];
         };
         cursor-shape = {
           normal = "block";
@@ -40,9 +38,9 @@
       };
       keys = {
         normal = {
-          esc = [ "collapse_selection" "keep_primary_selection" ];
-          C-g = [":new" ":insert-output lazygit" ":buffer-close!" ":redraw" ];
-          C-s = [ ":w" ];
+          esc = ["collapse_selection" "keep_primary_selection"];
+          C-g = [":new" ":insert-output lazygit" ":buffer-close!" ":redraw"];
+          C-s = [":w"];
         };
       };
     };

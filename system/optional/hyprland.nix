@@ -1,6 +1,4 @@
-{ pkgs,... }:
-
-let
+{pkgs, ...}: let
   greeter = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   session = "uwsm start hyprland-uwsm.desktop";
   username = "psoewish";
@@ -8,7 +6,7 @@ in {
   services.greetd = {
     enable = true;
     settings = {
-      initial_session= {
+      initial_session = {
         command = "${session}";
         user = "${username}";
       };

@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   networking = {
     networkmanager.enable = true;
     enableIPv6 = false;
@@ -9,8 +7,8 @@
 
   services.resolved = {
     enable = true;
-    domains = [ "~."];
-    fallbackDns = [ "9.9.9.9" "1.1.1.1" ];
+    domains = ["~."];
+    fallbackDns = ["9.9.9.9" "1.1.1.1"];
   };
 
   services.tailscale = {

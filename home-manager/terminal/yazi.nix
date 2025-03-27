@@ -1,6 +1,4 @@
-{ ... }:
-
-{
+{...}: {
   programs.yazi = {
     enable = true;
     settings = {
@@ -9,7 +7,10 @@
       };
       opener = {
         edit = [
-          { run = "hx \"$@\""; block = true; }
+          {
+            run = "hx \"$@\"";
+            block = true;
+          }
         ];
       };
     };
