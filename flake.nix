@@ -17,13 +17,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+  # Nixcord
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+    };
+
   # Stylix
     stylix = {
       url = "github:danth/stylix";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, ... } @inputs:
+  outputs = { self, nixpkgs, home-manager, nixcord, stylix, ... } @inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -42,6 +47,9 @@
               users.psoewish = import ./home-manager;
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
+              sharedModules = [
+                nixcord.homeManagerModules.nixcord
+              ];
             };
           }
         ];
