@@ -11,6 +11,7 @@
     grc
     ripgrep
     htop
+    fd
   ];
   programs = {
     zoxide = {
