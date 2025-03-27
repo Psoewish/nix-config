@@ -28,7 +28,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... } @inputs:
+  outputs = { self, nixpkgs, home-manager, stylix, nixcord, ... } @inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -39,8 +39,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/desktop/configuration.nix
-          inputs.stylix.nixosModules.stylix
-          inputs.home-manager.nixosModules.home-manager {
+          stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
@@ -48,7 +48,7 @@
               extraSpecialArgs = { inherit inputs; };
               backupFileExtension = "backup";
               sharedModules = [
-                inputs.nixcord.homeManagerModules.nixcord
+                nixcord.homeManagerModules.nixcord
               ];
             };
           }
