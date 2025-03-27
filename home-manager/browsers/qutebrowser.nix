@@ -21,6 +21,10 @@
     extraConfig = ''
       c.tabs.padding = {'top': 8, 'bottom': 8, 'right': 8, 'left': 8}
       config.bind('<Alt+Ctrl+C>', 'config-cycle tabs.show always never')
+      config.bind('<Alt+Ctrl+Up', 'set tabs.position top')
+      config.bind('<Alt+Ctrl+Down', 'set tabs.position bottom)
+      config.bind('<Alt+Ctrl+Left', 'set tabs.position left')
+      config.bind('<Alt+Ctrl+Right', 'set tabs.position right')
     '';
   };
 }
