@@ -13,6 +13,9 @@
       ls = "eza";
       ll = "eza -l";
       lt = "eza -T -L=3 --git-ignore";
+      nr = "nixhelper rebuild now";
+      nrb = "nixhelper rebuild later";
+      nru = "nixhelper upgrade now";
     };
     interactiveShellInit = ''
       set -U fish_greeting
