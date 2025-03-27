@@ -28,7 +28,6 @@ in {
 
     ./media/cider.nix
 
-    ./social/nixcord.nix
     ./social/vesktop.nix
 
     ./misc/rofi.nix
