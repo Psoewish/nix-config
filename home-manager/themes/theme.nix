@@ -19,13 +19,16 @@ in {
         package = pkgs.nerd-fonts.caskaydia-cove;
         name = "CaskaydiaCove Nerd Font";
       };
-      serif = {
+      sansSerif = {
         package = pkgs.roboto;
-        name = "Inter";
+        name = "Roboto";
       };
       # serif = config.stylix.fonts.monospace;
-      sansSerif = config.stylix.fonts.serif;
-      emoji = config.stylix.fonts.monospace;
+      serif = config.stylix.fonts.sansSerif;
+      emoji = {
+        package = pkgs.nerd-fonts.symbols-only;
+        name = "SymbolsOnly Nerd Font";
+      };
 
       sizes = {
         applications = 12;
