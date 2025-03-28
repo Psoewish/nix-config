@@ -37,8 +37,8 @@
       "$mod, O, layoutmsg, removemaster"
 
       "$ctrlmod, down, layoutmsg, mfact exact 0.5"
-      "$ctrlmod, left, layoutmsg, mfact -0.5"
-      "$ctrlmod, right, layoutmsg, mfact +0.5"
+      "$ctrlmod, left, layoutmsg, mfact -0.05"
+      "$ctrlmod, right, layoutmsg, mfact +0.05"
 
       "$mod, left, movefocus, l"
       "$shiftmod, left, movewindow, l"
