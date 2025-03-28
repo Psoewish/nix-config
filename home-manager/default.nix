@@ -12,6 +12,7 @@ in {
 
     ./terminal/wezterm.nix
     ./terminal/fish/fish.nix
+    ./terminal/starship.nix
     ./terminal/cli.nix
     ./terminal/git.nix
     ./terminal/helix.nix

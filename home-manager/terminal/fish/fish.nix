@@ -46,10 +46,6 @@
         name = "git-abbr";
         src = git-abbr.src;
       }
-      {
-        name = "pure";
-        src = pure.src;
-      }
     ];
   };
   home.file = {
