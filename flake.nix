@@ -12,19 +12,16 @@
     nixcord.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
-    alejandra.url = "github:kamadorueda/alejandra";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
+  outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
     nixcord,
     stylix,
-    alejandra,
     ...
-  } @ inputs: let
+  }: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
   in {
@@ -33,10 +30,7 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          {
-            environment.systemPackages = [alejandra.defaultPackage.${system}];
-          }
-          ./hosts/desktop/configuration.nix
+          ./hosts/desktop
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
@@ -46,9 +40,7 @@
               users.psoewish = import ./home-manager;
               extraSpecialArgs = {inherit inputs;};
               backupFileExtension = "backup";
-              sharedModules = [
-                nixcord.homeManagerModules.nixcord
-              ];
+              sharedModules = [ nixcord.homeManagerModules.nixcord ];
             };
           }
         ];
