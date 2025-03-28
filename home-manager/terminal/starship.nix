@@ -6,13 +6,13 @@
     enableTransience = true;
     settings = {
       format = lib.concatStrings [
-        "$directory\\"
-        "$git_branch\\"
-        "$git_status\\"
-        "$line_break\\"
-        "$username\\"
-        "hostname\\"
-        "$nix_shell\\"
+        "$directory"
+        "$git_branch"
+        "$git_status"
+        "$line_break"
+        "$username"
+        "$hostname"
+        "$nix_shell"
         "$character"
       ];
       git_branch.format = "[$branch]($style) ";
