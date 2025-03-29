@@ -1,4 +1,5 @@
 function __nixhelper_upgrade_man
+    echo
     echo (set_color --bold)"Upgrade commands"
     echo
     echo "       Command | Description"(set_color normal)
