@@ -16,6 +16,7 @@ in {
     ./terminal/cli.nix
     ./terminal/git.nix
     ./terminal/helix.nix
+    ./terminal/nvim.nix
     ./terminal/yazi.nix
     ./terminal/hyfetch.nix
     ./terminal/pass.nix
