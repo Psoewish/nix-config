@@ -36,9 +36,13 @@
       "$mod, I, layoutmsg, addmaster"
       "$mod, O, layoutmsg, removemaster"
 
-      "$ctrlmod, down, layoutmsg, mfact exact 0.5"
-      "$ctrlmod, left, layoutmsg, mfact -0.05"
-      "$ctrlmod, right, layoutmsg, mfact +0.05"
+      # "$ctrlmod, down, layoutmsg, mfact exact 0.5"
+      # "$ctrlmod, left, layoutmsg, mfact -0.05"
+      # "$ctrlmod, right, layoutmsg, mfact +0.05"
+      "$ctrlmod, left, resizeactive, -10 0"
+      "$ctrlmod, down, resizeactive, 0 10"
+      "$ctrlmod, up, resizeactive, 0 -10"
+      "$ctrlmod, right, resizeactive 10 0"
 
       "$mod, left, movefocus, l"
       "$shiftmod, left, movewindow, l"
