@@ -42,7 +42,7 @@
       "$ctrlmod, left, resizeactive, -10 0"
       "$ctrlmod, down, resizeactive, 0 10"
       "$ctrlmod, up, resizeactive, 0 -10"
-      "$ctrlmod, right, resizeactive 10 0"
+      "$ctrlmod, right, resizeactive, 10 0"
 
       "$mod, left, movefocus, l"
       "$shiftmod, left, movewindow, l"
