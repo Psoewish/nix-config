@@ -12,6 +12,7 @@
     wl-clipboard
     dunst
     waybar
+    pyprland
   ];
 
   imports = [

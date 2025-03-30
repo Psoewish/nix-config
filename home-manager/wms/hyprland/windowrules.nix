@@ -17,12 +17,5 @@
 
     # Start games on workspace 4
     "workspace 4, class:(steam_app_\d*)"
-
-    # Special workspaces
-    "workspace special:dropterm, class:(dropterm)"
-    "workspace special:dropaudio, class:(dropaudio)"
-    "workspace special:dropfile class:(dropfile)"
-    "float, center, size 50%, class:(dropterm|dropaudio|dropfile)"
-    "size 50%, class:(dropterm|dropaudio|dropfile)"
   ];
 }

@@ -36,13 +36,11 @@
       "$mod, I, layoutmsg, addmaster"
       "$mod, O, layoutmsg, removemaster"
 
-      # "$ctrlmod, down, layoutmsg, mfact exact 0.5"
-      # "$ctrlmod, left, layoutmsg, mfact -0.05"
-      # "$ctrlmod, right, layoutmsg, mfact +0.05"
-      "$ctrlmod, left, resizeactive, -10 0"
-      "$ctrlmod, down, resizeactive, 0 10"
-      "$ctrlmod, up, resizeactive, 0 -10"
-      "$ctrlmod, right, resizeactive, 10 0"
+      "$ctrlmod, left, resizeactive, -50 0"
+      "$ctrlmod, down, resizeactive, 0 50"
+      "$ctrlmod, up, resizeactive, 0 -50"
+      "$ctrlmod, right, resizeactive, 50 0"
+      "$ctrlmod, m, layoutmsg, mfact exact 0.5"
 
       "$mod, left, movefocus, l"
       "$shiftmod, left, movewindow, l"
@@ -66,9 +64,9 @@
       "$shiftmod, 5, movetoworkspace, 5"
 
       # Scratchpads
-      "$shiftmod, RETURN, togglespecialworkspace, dropterm"
-      "$shiftmod, E, togglespecialworkspace, dropfile"
-      "$shiftmod, P, togglespecialworkspace, dropaudio"
+      "$shiftmod, RETURN, exec, pypr toggle term"
+      "$shiftmod, P, exec, pypr toggle audio"
+      "$shiftmod, E, exec, pypr toggle files"
     ];
 
     bindm = [
