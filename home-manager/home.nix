@@ -9,6 +9,7 @@ in {
   imports = [
     ./wms/hyprland/hyprland.nix
     ./wms/waybar.nix
+    ./wms/qtile/kanshi.nix
 
     ./themes/theme.nix
 
