@@ -4,6 +4,7 @@
     settings = {
       colors.webpage.darkmode.enabled = true;
       colors.webpage.preferred_color_scheme = "dark";
+      colors.webpage.darkmode.policy.images = "never";
       downloads.position = "bottom";
       downloads.remove_finished = 300000;
       auto_save.session = true;
