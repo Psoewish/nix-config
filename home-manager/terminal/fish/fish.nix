@@ -11,9 +11,9 @@
       ls = "eza";
       ll = "eza -l";
       lt = "eza -T -L=3 --git-ignore";
-      ns = "nixhelper rebuild now";
-      nsb = "nixhelper rebuild later";
-      nsu = "nixhelper upgrade now";
+      ns = "nixhelper system rebuild now";
+      nsb = "nixhelper system rebuild later";
+      nsu = "nixhelper system upgrade now";
       nh = "nixhelper home now";
       nhb = "nixhelper home later";
     };
