@@ -10,7 +10,7 @@
     "$launcher" = "rofi -show drun";
     "$fileManager" = "wezterm start --class filemanager -- yazi";
     "$browser" = "qutebrowser";
-    "$browser2" = "zen-browser";
+    "$browser2" = "zen-beta";
     "$screenshot" = "grimblast --notify";
 
     "$media" = "playerctl -p 'cider'";
