@@ -3,19 +3,19 @@
   session = "uwsm start hyprland-uwsm.desktop";
   username = "psoewish";
 in {
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     initial_session = {
-  #       command = "${session}";
-  #       user = "${username}";
-  #     };
-  #     default_session = {
-  #       command = "${greeter} --asterisks --remember --remember-user-session --time -cmd ${session}";
-  #       user = "greeter";
-  #     };
-  #   };
-  # };
+  services.greetd = {
+    enable = true;
+    settings = {
+      initial_session = {
+        command = "${session}";
+        user = "${username}";
+      };
+      default_session = {
+        command = "${greeter} --asterisks --remember --remember-user-session --time -cmd ${session}";
+        user = "greeter";
+      };
+    };
+  };
 
   programs.hyprland = {
     enable = true;

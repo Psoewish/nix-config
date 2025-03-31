@@ -1,6 +1,5 @@
 {...}: {
   imports = [
-    ./displaymanager.nix
     ./git.nix
     ./users.nix
     ./automount.nix
