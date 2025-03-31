@@ -1,10 +1,21 @@
 { pkgs, ... }:
 
 {
-  services.xserver.windowManager.qtile = {
+  services.xserver= {
     enable = true;
-    extraPackages = python3Packages: with python3Packages; [
-      qtile-extras
-    ];
+    windowManager.qtile = {
+      enable = true;
+      extraPackages = python3Packages: with python3Packages; [
+        qtile-extras
+      ];
+    };
   };
+
+  environment.systemPackages = with pkgs.xorg; [
+    xinit
+    xorgserver
+    xf86inputevdev
+    xf86inputlibinput
+    xf86videoati
+  ];
 }
