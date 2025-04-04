@@ -30,10 +30,12 @@ function nixhelper
                     switch $argv[3]
                         case now
                             echo "Updating your flake.lock and switching to the new configuration."
+                            command nix flake update --commit-lock-file $nixdir
                             command sudo nixos-rebuild boot --upgrade --flake $nixdir
 
                         case later
                             echo "Updating your flake.lock and switching to the new configuration on reboot."
+                            command nix flake update --commit-lock-file $nixdir
                             command sudo nixos-rebuild boot --upgrade --flake $nixdir
 
                         case "*"
@@ -43,7 +45,7 @@ function nixhelper
 
                 case update
                     echo "Updating your flake.lock"
-                    command nix flake update --flake $nixdir
+                    command nix flake update --commit-lock-file $nixdir
             end
 
         case home
