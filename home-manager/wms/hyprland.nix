@@ -14,11 +14,11 @@ let
 
   # Scratchpad definitions
   scratchterm = "scratchterm";
-  scratchtermcmd = "${terminal} --class ${scratchterm}";
+  scratchtermcmd = "${terminal} start --class ${scratchterm}";
   scratchmixer = "scratchmixer";
-  scratchmixercmd = "${terminal} --class ${scratchmixer} start -- pulsemixer";
+  scratchmixercmd = "${terminal} start --class ${scratchmixer} -- pulsemixer";
   scratchfiles = "scratchfiles";
-  scratchfilescmd = "${terminal} --class ${scratchfiles} start -- yazi";
+  scratchfilescmd = "${terminal} start --class ${scratchfiles} -- yazi";
 
   # Hotkey helpers
   mod = "SUPER";
@@ -157,7 +157,7 @@ in {
 
         "${shiftmod}, RETURN, togglespecialworkspace, ${scratchterm}"
         "${shiftmod}, E, togglespecialworkspace, ${scratchfiles}"
-        "${shiftmod}, B, togglespecialworkspace, ${scratchmixer}"
+        "${shiftmod}, P, togglespecialworkspace, ${scratchmixer}"
       ];
 
       bindm = [
