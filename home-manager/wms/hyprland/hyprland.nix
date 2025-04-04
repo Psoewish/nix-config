@@ -7,21 +7,13 @@
 
   home.packages = with pkgs; [
     hypridle
-    mpvpaper
     grimblast
     wl-clipboard
     dunst
     waybar
-    pyprland
   ];
 
   imports = [
-    ./autostart.nix
     ./config.nix
-    ./monitors.nix
-    ./workspaces.nix
-    ./windowrules.nix
-    ./scratchpads.nix
-    ./keybinds.nix
   ];
 }
