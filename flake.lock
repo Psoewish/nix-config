@@ -381,12 +381,12 @@
         "home-manager": "home-manager",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs",
-        "spicetify": "spicetify",
+        "spicetify-nix": "spicetify-nix",
         "stylix": "stylix",
         "zen-browser": "zen-browser"
       }
     },
-    "spicetify": {
+    "spicetify-nix": {
       "inputs": {
         "nixpkgs": "nixpkgs_2",
         "systems": "systems_2"

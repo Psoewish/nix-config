@@ -12,7 +12,7 @@
     nixcord.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
-    spicetify.url = "github:gerg-l/spicetify-nix";
+    spicetify-nix.url = "github:gerg-l/spicetify-nix";
   };
 
   outputs = inputs @ {
@@ -21,7 +21,7 @@
     home-manager,
     nixcord,
     stylix,
-    spicetify,
+    spicetify-nix,
     ...
   }: let
     system = "x86_64-linux";
@@ -34,7 +34,6 @@
         modules = [
           ./hosts/desktop
           stylix.nixosModules.stylix
-          spicetify.nixosModules.spicetify
           home-manager.nixosModules.home-manager
           {
             home-manager = {
@@ -43,7 +42,10 @@
               users.psoewish = import ./home-manager;
               extraSpecialArgs = {inherit inputs;};
               backupFileExtension = "backup";
-              sharedModules = [ nixcord.homeManagerModules.nixcord ];
+              sharedModules = [
+                nixcord.homeManagerModules.nixcord
+                spicetify-nix.homeManagerModules.spicetify
+              ];
             };
           }
         ];
