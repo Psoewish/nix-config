@@ -25,6 +25,7 @@ in {
     ./browsers/qutebrowser.nix
 
     ./media/spicetify.nix
+    ./media/plex.nix
 
     ./social/nixcord.nix
 
