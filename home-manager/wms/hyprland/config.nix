@@ -1,6 +1,6 @@
 {...}:
 let
-  uwsm = "uwsm start --";
+  uwsm = "uwsm app --";
 
   # Define applications
   terminal = "${uwsm} wezterm";
@@ -56,7 +56,7 @@ in {
       "special:${scratchfiles}, on-created-empty:${scratchfilescmd}"
     ];
 
-    windowrules = [
+    windowrule = [
       "suppressevent maximize, class:.*"
       "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
 
@@ -139,6 +139,10 @@ in {
       "${shiftmod}, 3, movetoworkspace, 3"
       "${shiftmod}, 4, movetoworkspace, 4"
       "${shiftmod}, 5, movetoworkspace, 5"
+
+      "${shiftmod}, RETURN, togglespecialworkspace, ${scratchterm}"
+      "${shiftmod}, E, togglespecialworkspace, ${scratchfiles}"
+      "${shiftmod}, B, togglespecialworkspace, ${scratchmixer}"
     ];
 
     bindm = [
@@ -147,8 +151,8 @@ in {
     ];
 
     bindel = [
-      ", XF86AudioRaiseVolume, $uwsm wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume, $uwsm wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioRaiseVolume, exec, ${uwsm} wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, ${uwsm} wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     ];
 
     bindl = [
