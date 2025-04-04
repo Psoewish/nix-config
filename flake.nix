@@ -24,7 +24,6 @@
   }: let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
-    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
@@ -33,29 +32,17 @@
         modules = [
           ./hosts/desktop
           stylix.nixosModules.stylix
-          # home-manager.nixosModules.home-manager
-          # {
-          #   home-manager = {
-          #     useGlobalPkgs = true;
-          #     useUserPackages = true;
-          #     users.psoewish = import ./home-manager;
-          #     extraSpecialArgs = {inherit inputs;};
-          #     backupFileExtension = "backup";
-          #     sharedModules = [ nixcord.homeManagerModules.nixcord ];
-          #   };
-          # }
-        ];
-      };
-    };
-
-    homeConfigurations = {
-      psoewish = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-          ./home-manager/home.nix
-          stylix.homeManagerModules.stylix
-          nixcord.homeManagerModules.nixcord
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.psoewish = import ./home-manager;
+              extraSpecialArgs = {inherit inputs;};
+              backupFileExtension = "backup";
+              sharedModules = [ nixcord.homeManagerModules.nixcord ];
+            };
+          }
         ];
       };
     };

@@ -4,8 +4,6 @@ in {
   home.username = "${username}";
   home.homeDirectory = "/home/${username}";
 
-  nixpkgs.config.allowUnfree = true;
-
   imports = [
     ./wms/hyprland/hyprland.nix
     ./wms/waybar.nix
@@ -27,7 +25,7 @@ in {
     ./browsers/zen-browser.nix
     ./browsers/qutebrowser.nix
 
-    ./media/cider.nix
+    #./media/cider.nix
 
     ./social/nixcord.nix
     ./social/vesktop.nix
