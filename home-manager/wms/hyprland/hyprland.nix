@@ -21,6 +21,7 @@
     ./monitors.nix
     ./workspaces.nix
     ./windowrules.nix
+    ./scratchpads.nix
     ./keybinds.nix
   ];
 }
