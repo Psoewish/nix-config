@@ -32,6 +32,7 @@ let
     wl-clipboard
     dunst
     waybar
+    hyprshot
   ];
 
 in {

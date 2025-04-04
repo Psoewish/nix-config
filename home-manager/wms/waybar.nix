@@ -12,12 +12,12 @@
           "hyprland/workspaces"
         ];
         modules-center = [
-          "mpris"
+          "clock"
         ];
         modules-right = [
-          "tray"
+          "mpris"
           "privacy"
-          "clock"
+          "tray"
         ];
 
         "hyprland/workpaces" = {
@@ -41,6 +41,10 @@
           format = "{artist} - {title}";
           max-length = 80;
           interval = 1;
+        };
+        "tray" = {
+          "icon-size" = 24;
+          "spacing" = 4;
         };
       };
     };
