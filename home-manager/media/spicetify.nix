@@ -10,15 +10,6 @@ in {
       fullAppDisplay
       keyboardShortcut
     ];
-    enabledSnippets = [
-      "Rounded 'Now Playing' Bar"
-      "Rounded Images"
-      "Auto-hide Friends"
-      "Smooth Reveal Playlist Gradient"
-      "Hide Audiobooks Button"
-      "Hide Podcast Button"
-      "Hide Mini Player Button"
-    ];
     windowManagerPatch = true;
   };
 }
