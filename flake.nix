@@ -12,6 +12,7 @@
     nixcord.inputs.nixpkgs.follows = "nixpkgs";
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+    spicetify.url = "github:gerg-l/spicetify-nix";
   };
 
   outputs = inputs @ {
@@ -20,6 +21,7 @@
     home-manager,
     nixcord,
     stylix,
+    spicetify,
     ...
   }: let
     system = "x86_64-linux";
@@ -32,6 +34,7 @@
         modules = [
           ./hosts/desktop
           stylix.nixosModules.stylix
+          spicetify.nixosModules.spicetify
           home-manager.nixosModules.home-manager
           {
             home-manager = {

@@ -26,6 +26,7 @@ in {
     ./browsers/qutebrowser.nix
 
     #./media/cider.nix
+    ./media/spicetify.nix
 
     ./social/nixcord.nix
     ./social/vesktop.nix
