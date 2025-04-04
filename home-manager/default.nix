@@ -21,15 +21,12 @@ in {
     ./terminal/hyfetch.nix
     ./terminal/pass.nix
 
-    # ./browsers/firefox.nix
     ./browsers/zen-browser.nix
     ./browsers/qutebrowser.nix
 
-    #./media/cider.nix
     ./media/spicetify.nix
 
     ./social/nixcord.nix
-    ./social/vesktop.nix
 
     ./misc/rofi.nix
   ];
