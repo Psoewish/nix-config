@@ -13,7 +13,7 @@
     "$browser2" = "zen-beta";
     "$screenshot" = "grimblast --notify";
 
-    "$media" = "playerctl -p 'cider'";
+    "$media" = "playerctl -p 'spotify'";
 
     bind = [
       # Application launchers
