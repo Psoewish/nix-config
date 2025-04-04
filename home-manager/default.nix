@@ -5,7 +5,7 @@ in {
   home.homeDirectory = "/home/${username}";
 
   imports = [
-    ./wms/hyprland/hyprland.nix
+    ./wms/hyprland.nix
     ./wms/waybar.nix
 
     ./themes/theme.nix
