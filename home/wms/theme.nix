@@ -3,7 +3,6 @@
   config,
   ...
 }: let
-  wallpaper_dir = "~/nix-config/wallpapers";
   theme = "rose-pine";
   # Some example themes:
   # rose-pine, everforest, ayu-dark, ayu-mirage, catppuccin-mocha, dracula, gruvbox-dark-hard, nord, tokyo-night-dark
@@ -12,6 +11,7 @@ in {
     enable = true;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
+    image = ../../wallpapers/anime-wallpaper-night.jpg;
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
@@ -41,7 +41,6 @@ in {
       };
     };
 
-    image = "${wallpaper_dir}/anime-wallpaper-night.jpg";
 
     opacity.terminal = 0.8;
   };
