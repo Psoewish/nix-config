@@ -33,9 +33,15 @@ let
     dunst
     waybar
     hyprshot
+    rofi
   ];
 
 in {
+  imports = [
+    ./theme.nix
+    ./waybar.nix
+  ];
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enableXdgAutostart = true;

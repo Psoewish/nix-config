@@ -39,7 +39,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.psoewish = import ./home-manager;
+              users.psoewish = import ./home;
               extraSpecialArgs = {inherit inputs;};
               backupFileExtension = "backup";
               sharedModules = [
