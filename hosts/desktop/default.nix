@@ -2,8 +2,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../system/core
-    ../../system/optional/hyprland.nix
-    ../../system/optional/steam.nix
   ];
 
   networking.hostName = "nixos-desktop";

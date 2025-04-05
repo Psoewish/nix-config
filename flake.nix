@@ -33,6 +33,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/desktop
+          ./packages
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
