@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./hardware-configuration.nix
-    ../../system/core
+    ../core
   ];
 
   networking.hostName = "nixos-desktop";
