@@ -11,7 +11,7 @@ in {
     enable = true;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${theme}.yaml";
-    image = ../../wallpapers/anime-wallpaper-night.jpg;
+    image = ../wallpapers/anime-wallpaper-night.jpg;
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
