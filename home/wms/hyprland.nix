@@ -251,7 +251,7 @@ in {
         global = {
           monitor = 1;
           height = "(0, 300)";
-          width = "(0, 500)";
+          width = "(0, 600)";
           frame_width = 1;
           gap_size = 10;
           corner_radius = 8;
