@@ -247,6 +247,18 @@ in {
     dunst = {
       # defining this like this so stylix recognizes its existance.
       enable = true;
+      settings = {
+        global = {
+          monitor = 1;
+          height = "(0, 300)";
+          width = "(0, 500)";
+          frame_width = 1;
+          gap_size = 10;
+          corner_radius = 8;
+          origin = "top-center";
+          offset = "(0, 10)";
+        };
+      };
     };
   };
   
