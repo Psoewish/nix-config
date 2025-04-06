@@ -7,12 +7,10 @@
     unzip
     killall
     xdotool
-    jq
     grc
     ripgrep
-    htop
-    fd
   ];
+
   programs = {
     zoxide = {
       enable = true;
@@ -44,5 +42,14 @@
         prettybat
       ];
     };
+    fd = {
+      enable = true;
+      hidden = true;
+    };
+    jq.enable = true;
+    btop.enable = true;
+  };
+  services = {
+    tldr-update.enable = true;
   };
 }
