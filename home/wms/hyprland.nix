@@ -5,7 +5,8 @@ let
 
   # Define applications
   terminal = "${uwsm} wezterm";
-  launcher = "${uwsm} rofi -show drun";
+  # launcher = "${uwsm} rofi -show drun";
+  launcher = "${uwsm} fuzzel";
   filemanager = "${uwsm} ${terminal} start -- yazi";
   browser = "${uwsm} qutebrowser";
   browser2 = "${uwsm} zen-beta";
@@ -27,14 +28,11 @@ let
 
   # Extra packages
   extrapackages = with pkgs; [
-    hypridle
     grimblast
     wl-clipboard
-    dunst
-    waybar
     hyprshot
-    rofi
   ];
+  # Tools with more settings defined at the bottom: fuzzel, dunst, hypridle
 
 in {
   imports = [
@@ -222,6 +220,48 @@ in {
         new_status = "slave";
         new_on_top = false;
         new_on_active = "none";
+      };
+    };
+  };
+
+  services = {
+    hypridle = {
+      enable = true;
+      settings = {
+        general = {
+          after_sleep_cmd = "hyprctl dispatch dpms on";
+        };
+        listener = [
+          {
+            timeout = 1800;
+            on-timeout = "hyprctl dispatch dpms off";
+            on-resume = "hyprctl dispatch dpms on";
+          }
+          {
+            timeout = 5400;
+            on-timeout = "systemctl suspend";
+          }
+        ];
+      };
+    };
+    dunst = {
+      # defining this like this so stylix recognizes its existance.
+      enable = true;
+    };
+  };
+  
+  programs = {
+    fuzzel = {
+      enable = true;
+      settings = {
+        main = {
+          output = "DP-1";
+          terminal = "wezterm start --";
+        };
+        border = {
+          width = 1;
+          radius = 10;
+        };
       };
     };
   };
