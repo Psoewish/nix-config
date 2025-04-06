@@ -257,6 +257,8 @@ in {
         main = {
           output = "DP-1";
           terminal = "wezterm start --";
+          lines = 10;
+          width = 40;
         };
         border = {
           width = 1;
