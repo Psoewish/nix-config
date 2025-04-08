@@ -256,7 +256,7 @@ in {
           gap_size = 10;
           corner_radius = 8;
           origin = "top-center";
-          offset = "(0, 10)";
+          offset = "(0, 20)";
         };
       };
     };
