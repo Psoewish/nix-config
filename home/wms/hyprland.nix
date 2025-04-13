@@ -7,6 +7,7 @@ let
   terminal = "${uwsm} wezterm";
   # launcher = "${uwsm} rofi -show drun";
   launcher = "${uwsm} fuzzel";
+  passmenu = "${uwsm} passmenu";
   filemanager = "${uwsm} ${terminal} start -- yazi";
   browser = "${uwsm} qutebrowser";
   browser2 = "${uwsm} zen-beta";
@@ -128,6 +129,7 @@ in {
         "${mod}, B, exec, ${browser}"
         "${shiftmod}, B, exec, ${browser2}"
         "${mod}, SPACE, exec, ${launcher}"
+        "${mod}, P, exec, ${passmenu}"
 
         ", PRINT, exec, ${screenshot} --freeze copysave area"
         "SHIFT, PRINT, exec, ${screenshot} copysave output"
