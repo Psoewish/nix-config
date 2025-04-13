@@ -31,6 +31,7 @@ let
     grimblast
     wl-clipboard
     hyprshot
+    dmenu-wayland
   ];
   # Tools with more settings defined at the bottom: fuzzel, dunst, hypridle
 
