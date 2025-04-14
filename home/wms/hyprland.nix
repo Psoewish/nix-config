@@ -92,13 +92,14 @@ in {
         "float, size 65%, class:steam"
 
         # Always put these on my secondary monitor
-        "workspace 5, class:discord"
-        "workspace 5, class:vesktop"
-        "workspace 5, class:Cider"
-        "workspace 5, class:com.github.th_ch.youtube_music"
-        "workspace 5, class:spotify"
+        "workspace 6, class:discord"
+        "workspace 6, class:vesktop"
+        "workspace 6, class:Cider"
+        "workspace 6, class:com.github.th_ch.youtube_music"
+        "workspace 6, class:spotify"
 
-        # Start games on workspace 5
+        "workspace 2, class:jellyfin"
+        "workspace 3, class:home-server"
         "workspace 5, class:steam_app_\\d*"
 
         # Scratchpads
