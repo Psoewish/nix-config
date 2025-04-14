@@ -1,8 +1,9 @@
-{ ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs.qutebrowser = {
     enable = true;
+    loadAutoconfig = true;
     settings = {
       colors.webpage.darkmode.enabled = true;
       colors.webpage.preferred_color_scheme = "dark";
@@ -29,4 +30,7 @@
       config.bind('<Alt+Ctrl+Right>', 'set tabs.position right')
     '';
   };
+  home.packages = [
+    inputs.qbpm.packages.${pkgs.system}.default
+  ];
 }

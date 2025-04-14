@@ -13,6 +13,7 @@
     stylix.url = "github:danth/stylix";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:gerg-l/spicetify-nix";
+    qbpm.url = "github:pvsr/qbpm";
   };
 
   outputs = inputs @ {
@@ -22,6 +23,7 @@
     nixcord,
     stylix,
     spicetify-nix,
+    qbpm,
     ...
   }: let
     system = "x86_64-linux";
