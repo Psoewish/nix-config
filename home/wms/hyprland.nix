@@ -99,6 +99,7 @@ in {
         "workspace 6, class:spotify"
 
         "workspace 2, class:jellyfin"
+        "workspace 2, class:library"
         "workspace 3, class:home-server"
         "workspace 5, class:steam_app_\\d*"
 
