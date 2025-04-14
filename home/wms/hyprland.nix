@@ -98,8 +98,8 @@ in {
         "workspace 5, class:com.github.th_ch.youtube_music"
         "workspace 5, class:spotify"
 
-        # Start games on workspace 4
-        "workspace 4, class:steam_app_\\d*"
+        # Start games on workspace 5
+        "workspace 5, class:steam_app_\\d*"
 
         # Scratchpads
         # Terminal
