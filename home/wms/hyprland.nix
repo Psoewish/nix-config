@@ -89,7 +89,8 @@ in {
         "idleinhibit fullscreen, fullscreen:1"
 
         # Floating windows
-        "float, size 65%, class:steam"
+        "float, class:steam"
+        "size 65%, title:Steam"
 
         # Always put these on my secondary monitor
         "workspace 6, class:discord"
@@ -175,7 +176,7 @@ in {
 
       bindm = [
         "${mod}, mouse:272, movewindow"
-        "${mod}, mouse273, resizewindow"
+        "${mod}, mouse:273, resizewindow"
       ];
 
       bindel = [
