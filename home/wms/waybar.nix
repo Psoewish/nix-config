@@ -4,8 +4,9 @@
     systemd.enable = true;
     settings = {
       mainBar = {
-        output = "DP-1";
+        output = "DP-2";
         layer = "top";
+        position = "bottom";
         height = 20;
         spacing = 10;
         modules-left = [
@@ -22,9 +23,6 @@
 
         "hyprland/workpaces" = {
           format = "{icon}";
-          persistent-workspaces = {
-            DP-1 = 4;
-          };
           format-icons = {
             active = "󰪥";
             empty = "";
