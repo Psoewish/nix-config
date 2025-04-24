@@ -4,9 +4,8 @@
     systemd.enable = true;
     settings = {
       mainBar = {
-        output = "DP-2";
+        output = "DP-1";
         layer = "top";
-        position = "bottom";
         height = 20;
         spacing = 10;
         modules-left = [
