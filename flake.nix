@@ -46,7 +46,7 @@
               extraSpecialArgs = {inherit inputs;};
               backupFileExtension = "backup";
               sharedModules = [
-                nixcord.homeManagerModules.nixcord
+                nixcord.homeModules.nixcord
                 spicetify-nix.homeManagerModules.spicetify
               ];
             };
