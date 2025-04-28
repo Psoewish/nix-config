@@ -2,7 +2,7 @@
   imports = [
     ./git.nix
     ./users.nix
-    ./automount.nix
+    # ./automount.nix
     ./bootloader.nix
     ./graphics.nix
     ./bluetooth.nix
